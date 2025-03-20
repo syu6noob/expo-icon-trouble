@@ -99,7 +99,7 @@ export default function Button({
       {
         icon
           ? <View style={styles.iconContainer}>
-            <Icon name={icon} />
+            <Icon name={icon} size={32} color="black" />
           </View>
         : <></>
       }
