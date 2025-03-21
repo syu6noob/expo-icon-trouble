@@ -93,8 +93,6 @@ export default function Button({
     }
   });
 
-  console.log(icon)
-
   return (
     <Pressable
       style={styles.button}
