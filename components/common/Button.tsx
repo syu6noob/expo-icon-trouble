@@ -1,6 +1,6 @@
 import { Text, Pressable, StyleSheet, GestureResponderEvent } from "react-native";
 import Colors from "@/Colors";
-import Icon from '@expo/vector-icons/FontAwesome6';
+import { FontAwesome6 } from '@expo/vector-icons';
 import { View } from "react-native";
 
 export default function Button({
@@ -11,7 +11,7 @@ export default function Button({
   onPress = () => {}
 }: {
   text?: string,
-  icon?: keyof typeof Icon.glyphMap;
+  icon?: keyof typeof FontAwesome6.glyphMap;
   type?: 'blank' | 'peach' | 'orange' | 'green',
   size?: 'small' | 'medium' | 'large',
   onPress?: (event: GestureResponderEvent) => void
@@ -99,7 +99,7 @@ export default function Button({
       {
         icon
           ? <View style={styles.iconContainer}>
-            <Icon name={icon} size={32} color="black" />
+            <FontAwesome6 name={icon} size={measure.iconSize} color="black" />
           </View>
         : <></>
       }
