@@ -25,7 +25,7 @@ export default function Header({
     },
     icon: {
       height: "auto",
-      aspectRatio: 1/1
+      aspectRatio: 1 / 1
     },
     title: {
       position: "absolute",
@@ -44,8 +44,8 @@ export default function Header({
   return (
     <View style={styles.headerContainer}>
       <View style={styles.header}>
-        <Button type="blank" icon="chevron-left" size="medium" onPress={handleBackButtonPressed} />
-        <Text style={styles.title}>{text}</Text>
+        <Button text="Hi." type="blank" icon="chevron-left" size="medium" onPress={handleBackButtonPressed} />
+        {/* <Text style={styles.title}>{text}</Text> */}
       </View>
     </View>
   );

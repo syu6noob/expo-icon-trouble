@@ -8,10 +8,10 @@ export default function Button({
   icon,
   type = 'blank',
   size = 'medium',
-  onPress = () => {}
+  onPress = () => { }
 }: {
   text?: string,
-  icon?: keyof typeof FontAwesome6.glyphMap;
+  icon?: keyof typeof FontAwesome6.glyphMap,
   type?: 'blank' | 'peach' | 'orange' | 'green',
   size?: 'small' | 'medium' | 'large',
   onPress?: (event: GestureResponderEvent) => void
@@ -68,6 +68,8 @@ export default function Button({
   const styles = StyleSheet.create({
     button: {
       display: "flex",
+      flex: 1,
+      flexDirection: "row",
       paddingHorizontal: measure.padding,
       paddingVertical: measure.padding,
       backgroundColor: color.base,
@@ -92,7 +94,7 @@ export default function Button({
   });
 
   return (
-    <Pressable 
+    <Pressable
       style={styles.button}
       onPress={onPress}
     >
@@ -101,7 +103,7 @@ export default function Button({
           ? <View style={styles.iconContainer}>
             <FontAwesome6 name={icon} size={measure.iconSize} color="black" />
           </View>
-        : <></>
+          : <></>
       }
       {
         text ? <Text style={styles.text}>{text}</Text> : <></>
